@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notebook</string>
+    <string name="user_id">User ID</string>
+    <string name="Login">User Login</string>
+    <string name="LoginPass">Password</string>
+    <string name="Fingerprint_Text">Scan Fingerprint For Security Measures</string>
+    <string name="Register">Not Yet Registered?</string>
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgframe"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Content_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/View_Container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/Frame_Container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginVertical="139dp">
+
+
+                <!-- Login Frame -->
+                <RelativeLayout
+                    android:id="@+id/Login_Frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/Frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/frame" />
+
+                </RelativeLayout>
+
+                <!-- User ID Panel -->
+                <RelativeLayout
+                    android:id="@+id/User_Id_Panel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="114px"
+                        android:background="@drawable/idinput"/>
+
+                    <EditText
+                        android:id="@+id/User_Id_Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="55dp"
+                        android:background="#e4e4e4"
+                        android:hint="@string/user_id"
+                        android:textColor="#000000"
+                        android:textColorHint="#737373"
+                        android:textSize="20sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <ImageView
+                        android:layout_width="61px"
+                        android:layout_height="61px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/useridicon"/>
+
+                </RelativeLayout>
+
+                <!-- Password Panel -->
+                <RelativeLayout
+                    android:id="@+id/Password_Panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="210dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="114px"
+                        android:background="@drawable/idinput"/>
+
+                    <EditText
+                        android:id="@+id/Password_Input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="55dp"
+                        android:background="#e4e4e4"
+                        android:hint="@string/LoginPass"
+                        android:textColor="#000000"
+                        android:textColorHint="#737373"
+                        android:textSize="20sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <ImageView
+                        android:layout_width="61px"
+                        android:layout_height="61px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/userpassicon"/>
+
+                </RelativeLayout>
+
+                <!-- Fingerprint Panel -->
+                <RelativeLayout
+                    android:id="@+id/FingerPrintPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="219px"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginHorizontal="28dp">
+
+                    <ImageButton
+                        android:id="@+id/FingerPrint"
+                        android:layout_width="219px"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fingerprint"
+                        android:onClick="Login"
+                        android:contentDescription="FingerPrint Image"/>
+
+                    <TextView
+                        android:id="@+id/FingerPrintIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/FingerPrint"
+                        android:text="@string/Fingerprint_Text"
+                        android:textSize="45px"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="10dp"/>
+                    
+                    <ImageView
+                        android:layout_width="108px"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/FingerPrintIndicator"
+                        android:layout_toRightOf="@id/FingerPrint"
+                        android:background="@drawable/arrow"
+                        android:layout_marginLeft="10dp"/>
+                </RelativeLayout>
+
+                <!-- Register Text Panel -->
+                <TextView
+                    android:id="@+id/RegisterButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/FingerPrintPanel"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="100dp"
+                    android:onClick="Login"
+                    android:text="@string/Register"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <!-- Text: User Login -->
+                <TextView
+                    android:layout_marginTop="69dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="@string/Login"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    android:textSize="35sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <!-- User Profile -->
+            <ImageView
+                android:id="@+id/User_PFP"
+                android:layout_width="346px"
+                android:layout_height="346px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/userprofileicon" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
